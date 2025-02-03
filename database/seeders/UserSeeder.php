@@ -22,12 +22,12 @@ class UserSeeder extends Seeder
         }
 
         if($fake) {
-            $role = Role::whereName('default')->first();
-
             $users = User::factory(100)->create();
+
+            /*$role = Role::whereName('default')->first();
             foreach ($users as $user) {
                 $user->roles()->attach($role);
-            }
+            }*/
 
         }
     }
